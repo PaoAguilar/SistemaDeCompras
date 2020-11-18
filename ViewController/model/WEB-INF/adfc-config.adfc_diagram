@@ -17,4 +17,73 @@
       <property
          name="exceptionHandler">false</property>
    </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">gestionarEmpleado</property>
+      <property
+         name="x">442.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>gestionarEmpleado&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">214.07031</property>
+      <property
+         name="page">/gestionarEmpleado.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <WildcardControlFlowRule
+      id="WildcardControlFlowRule4">
+      <property
+         name="activityId">*</property>
+      <property
+         name="x">340.0</property>
+      <property
+         name="y">379.8672</property>
+   </WildcardControlFlowRule>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="WildcardControlFlowRule4"
+      to="View3">
+      <property
+         name="fromOutcome">gestionarEmpleado</property>
+      <property
+         name="sdm:polyPoints">T57,343.5,337.80078,442.0,268.0039,B50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase7"
+      from="WildcardControlFlowRule4"
+      to="View2">
+      <property
+         name="fromOutcome">principal</property>
+      <property
+         name="sdm:polyPoints">T43,336.5,337.80078,237.0,271.23242,B50</property>
+   </ControlFlowCase>
+   <View
+      id="View8">
+      <property
+         name="activityId">gestionarDepartamento</property>
+      <property
+         name="x">606.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>gestionarDepartamento&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">287.66797</property>
+      <property
+         name="page">/gestionarDepartamento.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase9"
+      from="WildcardControlFlowRule4"
+      to="View8">
+      <property
+         name="fromOutcome">gestionarDepartamento</property>
+      <property
+         name="sdm:polyPoints">R50,376.0,380.30078,565.0,287.60156,L50</property>
+   </ControlFlowCase>
 </SDM>

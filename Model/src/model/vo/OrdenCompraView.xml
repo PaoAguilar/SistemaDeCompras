@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="OrdenCompraView"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="OrdenCompra"
+    Entity="model.eo.OrdenCompra"/>
+  <ViewAttribute
+    Name="CodigoOrdenId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="CodigoOrdenId"
+    EntityUsage="OrdenCompra"
+    AliasName="CODIGO_ORDEN_ID"/>
+  <ViewAttribute
+    Name="PrecioTotal"
+    PrecisionRule="true"
+    EntityAttrName="PrecioTotal"
+    EntityUsage="OrdenCompra"
+    AliasName="PRECIO_TOTAL"/>
+  <ViewAttribute
+    Name="FechaOrden"
+    PrecisionRule="true"
+    EntityAttrName="FechaOrden"
+    EntityUsage="OrdenCompra"
+    AliasName="FECHA_ORDEN"/>
+  <ViewAttribute
+    Name="FechaEntrega"
+    IsQueriable="false"
+    PrecisionRule="true"
+    EntityAttrName="FechaEntrega"
+    EntityUsage="OrdenCompra"
+    AliasName="FECHA_ENTREGA"/>
+  <ViewAttribute
+    Name="ArticuloOfertaId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ArticuloOfertaId"
+    EntityUsage="OrdenCompra"
+    AliasName="ARTICULO_OFERTA_ID"/>
+  <ViewAttribute
+    Name="CompraRequesicionId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="CompraRequesicionId"
+    EntityUsage="OrdenCompra"
+    AliasName="COMPRA_REQUESICION_ID"/>
+  <ViewLinkAccessor
+    Name="NotaRemisionView"
+    ViewLink="model.vo.RemisionOrdenFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

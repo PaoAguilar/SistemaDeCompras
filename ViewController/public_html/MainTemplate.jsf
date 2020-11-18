@@ -42,16 +42,15 @@
         <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr2">
           <af:gridCell marginStart="5px" columnSpan="3" marginEnd="5px" id="pt_gc4">
             <af:menuBar id="pt_mb1">
-              <af:commandMenuItem text="DashBoard" id="pt_cmi2"/>
+              <af:commandMenuItem text="Sistema de Compras" id="pt_cmi2" action="principal"/>
               <af:menu text="Menu 1" id="pt_m2">
                 <af:commandMenuItem text="Acción 1   " id="pt_cmi3"/>
                 <af:commandMenuItem text="Acción 2" id="pt_cmi4"/>
                 <af:commandMenuItem text="Acción 3" id="pt_cmi5"/>
               </af:menu>
               <af:menu text="Modulo de RRHH" id="pt_m3">
-                <af:commandMenuItem text="Gestionar empleado" id="pt_cmi6"/>
-                <af:commandMenuItem text="Acción 5" id="pt_cmi7"/>
-                <af:commandMenuItem text="Acción 6" id="pt_cmi8"/>
+                <af:commandMenuItem text="Gestionar empleado" id="pt_cmi6" action="gestionarEmpleado"/>
+                <af:commandMenuItem text="Gestionar departamento" id="pt_cmi7" action="gestionarDepartamento"/>
               </af:menu>
             </af:menuBar>
           </af:gridCell>
