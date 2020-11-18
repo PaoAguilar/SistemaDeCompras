@@ -5,7 +5,7 @@
     <af:form id="f1">
       <af:pageTemplate viewId="/MainTemplate.jsf" id="pt1">
         <f:facet name="body"/>
-        <f:attribute name="pageTitle" value="Página Principal"/>
+        <f:attribute name="pageTitle" value="Sistema de Compras"/>
       </af:pageTemplate>
     </af:form>
   </af:document>
