@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="gestionarEmpleadoPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmpleadoView1" RangeSize="25" DataControl="AppModuleDataControl" id="EmpleadoView1Iterator"/>
+    <searchRegion Binds="EmpleadoView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="EmpleadoView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="EmpleadoView1Iterator" id="EmpleadoView1">
+      <nodeDefinition DefName="model.vo.EmpleadoView" Name="EmpleadoView10">
+        <AttrNames>
+          <Item Value="IdUsuario"/>
+          <Item Value="Dui"/>
+          <Item Value="NombreEmp"/>
+          <Item Value="ApellidoEmp"/>
+          <Item Value="TelefonoEm"/>
+          <Item Value="Edad"/>
+          <Item Value="Genero"/>
+          <Item Value="EstadoCivil"/>
+          <Item Value="DepartamentoId"/>
+          <Item Value="DireccionId"/>
+          <Item Value="UsuarioId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="EmpleadoView1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="EmpleadoView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>
