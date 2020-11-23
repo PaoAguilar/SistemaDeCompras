@@ -22,11 +22,11 @@
       <property
          name="activityId">gestionarEmpleado</property>
       <property
-         name="x">442.0</property>
+         name="x">379.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>gestionarEmpleado&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">214.07031</property>
+         name="y">210.36914</property>
       <property
          name="page">/gestionarEmpleado.jsf</property>
       <property
@@ -49,7 +49,7 @@
       <property
          name="fromOutcome">gestionarEmpleado</property>
       <property
-         name="sdm:polyPoints">T57,343.5,337.80078,442.0,268.0039,B50</property>
+         name="sdm:polyPoints">T57,343.5,337.5166,379.0,264.01855,B50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -59,18 +59,18 @@
       <property
          name="fromOutcome">principal</property>
       <property
-         name="sdm:polyPoints">T43,336.5,337.80078,237.0,271.23242,B50</property>
+         name="sdm:polyPoints">T43,336.5,337.5166,237.0,270.94824,B50</property>
    </ControlFlowCase>
    <View
       id="View8">
       <property
          name="activityId">gestionarDepartamento</property>
       <property
-         name="x">606.0</property>
+         name="x">547.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>gestionarDepartamento&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">287.66797</property>
+         name="y">201.9668</property>
       <property
          name="page">/gestionarDepartamento.jsf</property>
       <property
@@ -84,6 +84,56 @@
       <property
          name="fromOutcome">gestionarDepartamento</property>
       <property
-         name="sdm:polyPoints">R50,376.0,380.30078,565.0,287.60156,L50</property>
+         name="sdm:polyPoints">R39,376.0,373.0166,547.0,255.61621,B50</property>
+   </ControlFlowCase>
+   <View
+      id="View10">
+      <property
+         name="activityId">gestionarArticulo</property>
+      <property
+         name="x">520.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>gestionarArticulo&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">414.89648</property>
+      <property
+         name="page">/gestionarArticulo.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="WildcardControlFlowRule4"
+      to="View10">
+      <property
+         name="fromOutcome">gestionarArticulo</property>
+      <property
+         name="sdm:polyPoints">R61,376.0,387.0166,479.0,414.5459,L50</property>
+   </ControlFlowCase>
+   <View
+      id="View12">
+      <property
+         name="activityId">ofertaArticulos</property>
+      <property
+         name="x">671.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>ofertaArticulos&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">337.59766</property>
+      <property
+         name="page">/ofertaArticulos.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase13"
+      from="WildcardControlFlowRule4"
+      to="View12">
+      <property
+         name="fromOutcome">ofertaArticulos</property>
+      <property
+         name="sdm:polyPoints">R50,377.37845,380.0166,630.0,337.24707,L50</property>
    </ControlFlowCase>
 </SDM>

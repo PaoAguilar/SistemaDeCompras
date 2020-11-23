@@ -22,38 +22,80 @@
     PrecisionRule="true"
     EntityAttrName="ArticuloId"
     EntityUsage="Articulo"
-    AliasName="ARTICULO_ID"/>
+    AliasName="ARTICULO_ID">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.vo.ArticuloView.ArticuloId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Serial"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="Serial"
     EntityUsage="Articulo"
-    AliasName="SERIAL"/>
+    AliasName="SERIAL">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.vo.ArticuloView.Serial_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Articulo1"
     PrecisionRule="true"
     EntityAttrName="Articulo"
     EntityUsage="Articulo"
-    AliasName="ARTICULO"/>
+    AliasName="ARTICULO">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.vo.ArticuloView.Articulo1_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="MarcaEquipo"
     PrecisionRule="true"
     EntityAttrName="MarcaEquipo"
     EntityUsage="Articulo"
-    AliasName="MARCA_EQUIPO"/>
+    AliasName="MARCA_EQUIPO">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.vo.ArticuloView.MarcaEquipo_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ModeloEquipo"
     PrecisionRule="true"
     EntityAttrName="ModeloEquipo"
     EntityUsage="Articulo"
-    AliasName="MODELO_EQUIPO"/>
+    AliasName="MODELO_EQUIPO">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.vo.ArticuloView.ModeloEquipo_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="DescripcionArticulo"
     PrecisionRule="true"
     EntityAttrName="DescripcionArticulo"
     EntityUsage="Articulo"
-    AliasName="DESCRIPCION_ARTICULO"/>
+    AliasName="DESCRIPCION_ARTICULO">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.vo.ArticuloView.DescripcionArticulo_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="InventarioView"
     ViewLink="model.vo.InventarioArticuloFkLink"
@@ -69,4 +111,8 @@
     ViewLink="model.vo.RequisionCompraArticuloFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

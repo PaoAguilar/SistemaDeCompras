@@ -43,9 +43,9 @@
           <af:gridCell marginStart="5px" columnSpan="3" marginEnd="5px" id="pt_gc4">
             <af:menuBar id="pt_mb1">
               <af:commandMenuItem text="Sistema de Compras" id="pt_cmi2" action="principal"/>
-              <af:menu text="Menu 1" id="pt_m2">
-                <af:commandMenuItem text="Acción 1   " id="pt_cmi3"/>
-                <af:commandMenuItem text="Acción 2" id="pt_cmi4"/>
+              <af:menu text="Artículo" id="pt_m2">
+                <af:commandMenuItem text="Artículo" id="pt_cmi3" action="gestionarArticulo"/>
+                <af:commandMenuItem text="Gestionar oferta de artículo" id="pt_cmi4" action="ofertaArticulos"/>
                 <af:commandMenuItem text="Acción 3" id="pt_cmi5"/>
               </af:menu>
               <af:menu text="Modulo de RRHH" id="pt_m3">

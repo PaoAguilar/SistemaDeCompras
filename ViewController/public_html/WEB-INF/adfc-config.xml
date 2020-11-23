@@ -9,6 +9,12 @@
   <view id="gestionarDepartamento">
     <page>/gestionarDepartamento.jsf</page>
   </view>
+  <view id="gestionarArticulo">
+    <page>/gestionarArticulo.jsf</page>
+  </view>
+  <view id="ofertaArticulos">
+    <page>/ofertaArticulos.jsf</page>
+  </view>
   <control-flow-rule id="__1">
     <from-activity-id>*</from-activity-id>
     <control-flow-case id="__3">
@@ -22,6 +28,14 @@
     <control-flow-case id="__5">
       <from-outcome>gestionarDepartamento</from-outcome>
       <to-activity-id>gestionarDepartamento</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__2">
+      <from-outcome>gestionarArticulo</from-outcome>
+      <to-activity-id>gestionarArticulo</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__6">
+      <from-outcome>ofertaArticulos</from-outcome>
+      <to-activity-id>ofertaArticulos</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
 </adfc-config>

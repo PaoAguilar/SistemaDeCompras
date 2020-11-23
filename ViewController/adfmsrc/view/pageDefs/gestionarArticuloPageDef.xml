@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="gestionarArticuloPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ArticuloView1" RangeSize="25" DataControl="AppModuleDataControl" id="ArticuloView1Iterator"/>
+    <searchRegion Binds="ArticuloView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="ArticuloView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="ArticuloView1Iterator" id="ArticuloView1">
+      <nodeDefinition DefName="model.vo.ArticuloView" Name="ArticuloView10">
+        <AttrNames>
+          <Item Value="ArticuloId"/>
+          <Item Value="Serial"/>
+          <Item Value="Articulo1"/>
+          <Item Value="MarcaEquipo"/>
+          <Item Value="ModeloEquipo"/>
+          <Item Value="DescripcionArticulo"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="ArticuloView1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="ArticuloView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>
