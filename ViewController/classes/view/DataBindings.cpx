@@ -8,6 +8,11 @@
   <pageDefinitionUsages>
     <page id="view_gestionarEmpleadoPageDef" path="view.pageDefs.gestionarEmpleadoPageDef"/>
     <page id="view_gestionarDepartamentoPageDef" path="view.pageDefs.gestionarDepartamentoPageDef"/>
+    <page path="/gestionarArticulo.jsf" usageId="view_gestionarArticuloPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_gestionarEmpleadoPageDef" path="view.pageDefs.gestionarEmpleadoPageDef"/>
+    <page id="view_gestionarArticuloPageDef" path="view.pageDefs.gestionarArticuloPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.eo"

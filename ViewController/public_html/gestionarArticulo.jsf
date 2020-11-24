@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="Gestionar artículos" id="d1">
+    <af:messages id="m1"/>
+    <af:form id="f1">
+      <af:pageTemplate viewId="/MainTemplate.jsf" id="pt1">
+        <f:facet name="body">
+          <af:panelGroupLayout id="pgl1" layout="vertical" halign="center">
+            <af:spacer id="s1" height="30" width="10"/>
+            <af:panelGroupLayout id="pgl2" layout="horizontal" halign="default">
+              <af:button actionListener="#{bindings.CreateInsert.execute}" text="Agregar"
+                         disabled="#{!bindings.CreateInsert.enabled}" id="b1" icon="/images/add.png"/>
+              <af:button actionListener="#{bindings.Delete.execute}" text="Eliminar"
+                         disabled="#{!bindings.Delete.enabled}" id="b2" icon="/images/delete.png"/>
+              <af:button actionListener="#{bindings.Commit.execute}" text="Guardar" id="b3" icon="/images/save.png"/>
+              <af:button actionListener="#{bindings.Rollback.execute}" text="Cancelar" immediate="true" id="b4" icon="/images/cancel.png">
+                <af:resetActionListener/>
+              </af:button>
+              <f:facet name="separator">
+                <af:spacer id="s3" height="10" width="10"/>
+              </f:facet>
+            </af:panelGroupLayout>
+            <af:spacer id="s2" height="10" width="10"/>
+            <af:panelCollection id="pc1" inlineStyle="width:1300px;">
+              <f:facet name="menus"/>
+              <f:facet name="toolbar"/>
+              <f:facet name="statusbar"/>
+              <af:table value="#{bindings.ArticuloView1.collectionModel}" var="row"
+                        rows="#{bindings.ArticuloView1.rangeSize}"
+                        emptyText="#{bindings.ArticuloView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        rowBandingInterval="0" selectedRowKeys="#{bindings.ArticuloView1.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.ArticuloView1.collectionModel.makeCurrent}" rowSelection="single"
+                        fetchSize="#{bindings.ArticuloView1.rangeSize}"
+                        filterModel="#{bindings.ArticuloView1Query.queryDescriptor}" filterVisible="true"
+                        queryListener="#{bindings.ArticuloView1Query.processQuery}" varStatus="vs" id="t1"
+                        autoHeightRows="-1" partialTriggers=":::b1 :::b2" inlineStyle="width:700px;">
+                <af:column sortProperty="#{bindings.ArticuloView1.hints.ArticuloId.name}" filterable="true"
+                           sortable="true" headerText="#{bindings.ArticuloView1.hints.ArticuloId.label}" id="c1">
+                  <af:inputText value="#{row.bindings.ArticuloId.inputValue}"
+                                label="#{bindings.ArticuloView1.hints.ArticuloId.label}"
+                                required="#{bindings.ArticuloView1.hints.ArticuloId.mandatory}"
+                                columns="#{bindings.ArticuloView1.hints.ArticuloId.displayWidth}"
+                                maximumLength="#{bindings.ArticuloView1.hints.ArticuloId.precision}"
+                                shortDesc="#{bindings.ArticuloView1.hints.ArticuloId.tooltip}" id="it1">
+                    <f:validator binding="#{row.bindings.ArticuloId.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.ArticuloView1.hints.ArticuloId.format}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.ArticuloView1.hints.Serial.name}" filterable="true" sortable="true"
+                           headerText="#{bindings.ArticuloView1.hints.Serial.label}" id="c2">
+                  <af:inputText value="#{row.bindings.Serial.inputValue}"
+                                label="#{bindings.ArticuloView1.hints.Serial.label}"
+                                required="#{bindings.ArticuloView1.hints.Serial.mandatory}"
+                                columns="#{bindings.ArticuloView1.hints.Serial.displayWidth}"
+                                maximumLength="#{bindings.ArticuloView1.hints.Serial.precision}"
+                                shortDesc="#{bindings.ArticuloView1.hints.Serial.tooltip}" id="it2">
+                    <f:validator binding="#{row.bindings.Serial.validator}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.ArticuloView1.hints.Articulo1.name}" filterable="true"
+                           sortable="true" headerText="#{bindings.ArticuloView1.hints.Articulo1.label}" id="c3">
+                  <af:inputText value="#{row.bindings.Articulo1.inputValue}"
+                                label="#{bindings.ArticuloView1.hints.Articulo1.label}"
+                                required="#{bindings.ArticuloView1.hints.Articulo1.mandatory}"
+                                columns="#{bindings.ArticuloView1.hints.Articulo1.displayWidth}"
+                                maximumLength="#{bindings.ArticuloView1.hints.Articulo1.precision}"
+                                shortDesc="#{bindings.ArticuloView1.hints.Articulo1.tooltip}" id="it3">
+                    <f:validator binding="#{row.bindings.Articulo1.validator}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.ArticuloView1.hints.MarcaEquipo.name}" filterable="true"
+                           sortable="true" headerText="#{bindings.ArticuloView1.hints.MarcaEquipo.label}" id="c4">
+                  <af:inputText value="#{row.bindings.MarcaEquipo.inputValue}"
+                                label="#{bindings.ArticuloView1.hints.MarcaEquipo.label}"
+                                required="#{bindings.ArticuloView1.hints.MarcaEquipo.mandatory}"
+                                columns="#{bindings.ArticuloView1.hints.MarcaEquipo.displayWidth}"
+                                maximumLength="#{bindings.ArticuloView1.hints.MarcaEquipo.precision}"
+                                shortDesc="#{bindings.ArticuloView1.hints.MarcaEquipo.tooltip}" id="it4">
+                    <f:validator binding="#{row.bindings.MarcaEquipo.validator}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.ArticuloView1.hints.ModeloEquipo.name}" filterable="true"
+                           sortable="true" headerText="#{bindings.ArticuloView1.hints.ModeloEquipo.label}" id="c5">
+                  <af:inputText value="#{row.bindings.ModeloEquipo.inputValue}"
+                                label="#{bindings.ArticuloView1.hints.ModeloEquipo.label}"
+                                required="#{bindings.ArticuloView1.hints.ModeloEquipo.mandatory}"
+                                columns="#{bindings.ArticuloView1.hints.ModeloEquipo.displayWidth}"
+                                maximumLength="#{bindings.ArticuloView1.hints.ModeloEquipo.precision}"
+                                shortDesc="#{bindings.ArticuloView1.hints.ModeloEquipo.tooltip}" id="it5">
+                    <f:validator binding="#{row.bindings.ModeloEquipo.validator}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.ArticuloView1.hints.DescripcionArticulo.name}" filterable="true"
+                           sortable="true" headerText="#{bindings.ArticuloView1.hints.DescripcionArticulo.label}"
+                           id="c6">
+                  <af:inputText value="#{row.bindings.DescripcionArticulo.inputValue}"
+                                label="#{bindings.ArticuloView1.hints.DescripcionArticulo.label}"
+                                required="#{bindings.ArticuloView1.hints.DescripcionArticulo.mandatory}"
+                                columns="#{bindings.ArticuloView1.hints.DescripcionArticulo.displayWidth}"
+                                maximumLength="#{bindings.ArticuloView1.hints.DescripcionArticulo.precision}"
+                                shortDesc="#{bindings.ArticuloView1.hints.DescripcionArticulo.tooltip}" id="it6">
+                    <f:validator binding="#{row.bindings.DescripcionArticulo.validator}"/>
+                  </af:inputText>
+                </af:column>
+              </af:table>
+            </af:panelCollection>
+          </af:panelGroupLayout>
+        </f:facet>
+        <f:attribute name="pageTitle" value="Gestionar artículo"/>
+        
+      </af:pageTemplate>
+    </af:form>
+  </af:document>
+</f:view>
