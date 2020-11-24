@@ -3,9 +3,11 @@
              SeparateXMLFiles="false" Package="view" ClientType="Generic">
   <pageMap>
     <page path="/gestionarEmpleado.jsf" usageId="view_gestionarEmpleadoPageDef"/>
+    <page path="/gestionarDepartamento.jsf" usageId="view_gestionarDepartamentoPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_gestionarEmpleadoPageDef" path="view.pageDefs.gestionarEmpleadoPageDef"/>
+    <page id="view_gestionarDepartamentoPageDef" path="view.pageDefs.gestionarDepartamentoPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.eo"

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="gestionarDepartamentoPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="DepartamentoView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="DepartamentoView1Iterator"/>
+    <searchRegion Binds="DepartamentoView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="DepartamentoView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="DepartamentoView1Iterator" id="DepartamentoView1">
+      <nodeDefinition DefName="model.vo.DepartamentoView" Name="DepartamentoView10">
+        <AttrNames>
+          <Item Value="DepartamentoId"/>
+          <Item Value="NombreDepartamento"/>
+          <Item Value="CodigoDepartamento"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="DepartamentoView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="DepartamentoView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

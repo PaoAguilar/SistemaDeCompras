@@ -45,4 +45,8 @@
     ViewLink="model.vo.RequisionCompraDepartFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <SortCriteria>
+    <Sort
+      Attribute="DepartamentoId"/>
+  </SortCriteria>
 </ViewObject>
