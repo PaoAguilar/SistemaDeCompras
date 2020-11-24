@@ -32,35 +32,6 @@
       <property
          name="exceptionHandler">false</property>
    </View>
-   <WildcardControlFlowRule
-      id="WildcardControlFlowRule4">
-      <property
-         name="activityId">*</property>
-      <property
-         name="x">501.0</property>
-      <property
-         name="y">374.73438</property>
-   </WildcardControlFlowRule>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase6"
-      from="WildcardControlFlowRule4"
-      to="View3">
-      <property
-         name="fromOutcome">gestionarEmpleado</property>
-      <property
-         name="sdm:polyPoints">R45,537.0,371.66797,693.0,253.73828,B50</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase7"
-      from="WildcardControlFlowRule4"
-      to="View2">
-      <property
-         name="fromOutcome">principal</property>
-      <property
-         name="sdm:polyPoints">T57,504.5,332.66797,564.0,251.9668,B50</property>
-   </ControlFlowCase>
    <View
       id="View8">
       <property
@@ -76,16 +47,6 @@
       <property
          name="exceptionHandler">false</property>
    </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase9"
-      from="WildcardControlFlowRule4"
-      to="View8">
-      <property
-         name="fromOutcome">gestionarDepartamento</property>
-      <property
-         name="sdm:polyPoints">R55,539.20325,378.66797,808.0,204.20312,L50</property>
-   </ControlFlowCase>
    <View
       id="View10">
       <property
@@ -106,11 +67,11 @@
       <property
          name="activityId">registrarEntradas</property>
       <property
-         name="x">329.0</property>
+         name="x">226.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>registrarEntradas&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">200.60156</property>
+         name="y">203.90039</property>
       <property
          name="page">/registrarEntradas.jsf</property>
       <property
@@ -121,83 +82,167 @@
       <property
          name="activityId">registrarSalidas</property>
       <property
-         name="x">223.0</property>
+         name="x">161.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>registrarSalidas&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">198.60156</property>
+         name="y">338.9004</property>
       <property
          name="page">/registrarSalidas.jsf</property>
-         name="activityId">gestionarArticulo</property>
-      <property
-         name="x">520.0</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>gestionarArticulo&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">414.89648</property>
-      <property
-         name="page">/gestionarArticulo.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase11"
-      from="WildcardControlFlowRule4"
-      to="View10">
-      <property
-         name="fromOutcome">gestionarArticulo</property>
-      <property
-         name="sdm:polyPoints">R61,376.0,387.0166,479.0,414.5459,L50</property>
-   </ControlFlowCase>
    <View
-      id="View12">
+      id="View13">
       <property
          name="activityId">ofertaArticulos</property>
       <property
-         name="x">671.0</property>
+         name="x">0.34960938</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>ofertaArticulos&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">337.59766</property>
+         name="y">9.097656</property>
       <property
          name="page">/ofertaArticulos.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
+   <View
+      id="View26">
+      <property
+         name="activityId">gestionarArticulo</property>
+      <property
+         name="x">121.68945</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>gestionarArticulo&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">36.79883</property>
+      <property
+         name="page">/gestionarArticulo.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <WildcardControlFlowRule
+      id="WildcardControlFlowRule27">
+      <property
+         name="activityId">*</property>
+      <property
+         name="srcid">__1</property>
+      <property
+         name="x">192.0</property>
+      <property
+         name="y">26.597656</property>
+   </WildcardControlFlowRule>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase13"
-      from="WildcardControlFlowRule4"
-      to="View10">
+      id="ControlFlowCase28"
+      from="WildcardControlFlowRule27"
+      to="View13">
       <property
-         name="fromOutcome">gestionarProveedor</property>
-      <property
-         name="sdm:polyPoints">T43,497.5,332.66797,447.0,255.53516,B50</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase14"
-      from="WildcardControlFlowRule4"
-      to="View11">
-      <property
-         name="fromOutcome">registrarEntradas</property>
-      <property
-         name="sdm:polyPoints">L45,465.0,371.66797,329.0,254.53516,B50</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase15"
-      from="WildcardControlFlowRule4"
-      to="View12">
-      <property
-         name="fromOutcome">registrarSalidas</property>
-      <property
-         name="sdm:polyPoints">L55,462.84317,378.66797,223.0,252.53516,B50</property>
-      to="View12">
+         name="tosrcid">__9</property>
       <property
          name="fromOutcome">ofertaArticulos</property>
       <property
-         name="sdm:polyPoints">R50,377.37845,380.0166,630.0,337.24707,L50</property>
+         name="fromsrcid">__1</property>
+      <property
+         name="sdm:polyPoints">T57,195.5,-22.170647,0.34960938,-45.25293,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase29"
+      from="WildcardControlFlowRule27"
+      to="View10">
+      <property
+         name="tosrcid">__2</property>
+      <property
+         name="fromOutcome">gestionarProveedor</property>
+      <property
+         name="fromsrcid">__1</property>
+      <property
+         name="sdm:polyPoints">R66,228.0,37.24707,406.0,201.25098,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase30"
+      from="WildcardControlFlowRule27"
+      to="View3">
+      <property
+         name="tosrcid">__3</property>
+      <property
+         name="fromOutcome">gestionarEmpleado</property>
+      <property
+         name="fromsrcid">__1</property>
+      <property
+         name="sdm:polyPoints">R45,230.96857,23.24707,693.0,145.4541,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase31"
+      from="WildcardControlFlowRule27"
+      to="View11">
+      <property
+         name="tosrcid">__6</property>
+      <property
+         name="fromOutcome">registrarEntradas</property>
+      <property
+         name="fromsrcid">__1</property>
+      <property
+         name="sdm:polyPoints">B57,195.5,69.24707,226.0,149.5498,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase32"
+      from="WildcardControlFlowRule27"
+      to="View2">
+      <property
+         name="tosrcid">__4</property>
+      <property
+         name="fromOutcome">principal</property>
+      <property
+         name="fromsrcid">__1</property>
+      <property
+         name="sdm:polyPoints">R55,229.94145,30.24707,564.0,143.68262,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase33"
+      from="WildcardControlFlowRule27"
+      to="View12">
+      <property
+         name="tosrcid">__7</property>
+      <property
+         name="fromOutcome">registrarSalidas</property>
+      <property
+         name="fromsrcid">__1</property>
+      <property
+         name="sdm:polyPoints">B43,188.5,69.24707,161.0,284.5498,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase34"
+      from="WildcardControlFlowRule27"
+      to="View26">
+      <property
+         name="tosrcid">__8</property>
+      <property
+         name="fromOutcome">gestionarArticulo</property>
+      <property
+         name="fromsrcid">__1</property>
+      <property
+         name="sdm:polyPoints">T43,188.5,-15.75293,121.68945,-17.551758,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase35"
+      from="WildcardControlFlowRule27"
+      to="View8">
+      <property
+         name="tosrcid">__5</property>
+      <property
+         name="fromOutcome">gestionarDepartamento</property>
+      <property
+         name="fromsrcid">__1</property>
+      <property
+         name="sdm:polyPoints">R34,231.79323,16.24707,849.0,149.91895,T50</property>
    </ControlFlowCase>
 </SDM>
