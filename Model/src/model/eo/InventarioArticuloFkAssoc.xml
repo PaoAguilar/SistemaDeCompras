@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="InventarioArticuloFkAssoc"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="Articulo"
+    Cardinality="1"
+    Source="true"
+    Owner="model.eo.Articulo">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Articulo"/>
+      <Attr Name="_foreignKey" Value="model.eo.Articulo.ArticuloPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Articulo.ArticuloId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="Inventario"
+    Cardinality="-1"
+    Owner="model.eo.Inventario">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Inventario"/>
+      <Attr Name="_foreignKey" Value="model.eo.Inventario.InventarioArticuloFk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Inventario.ArticuloId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

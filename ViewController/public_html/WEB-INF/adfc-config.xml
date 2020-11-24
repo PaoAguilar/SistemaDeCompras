@@ -3,4 +3,46 @@
   <view id="Principal">
     <page>/Principal.jsf</page>
   </view>
+  <view id="gestionarEmpleado">
+    <page>/gestionarEmpleado.jsf</page>
+  </view>
+  <view id="gestionarDepartamento">
+    <page>/gestionarDepartamento.jsf</page>
+  </view>
+  <view id="gestionarProveedor">
+    <page>/gestionarProveedor.jsf</page>
+  </view>
+  <view id="registrarEntradas">
+    <page>/registrarEntradas.jsf</page>
+  </view>
+  <view id="registrarSalidas">
+    <page>/registrarSalidas.jsf</page>
+  </view>
+  <control-flow-rule id="__1">
+    <from-activity-id>*</from-activity-id>
+    <control-flow-case id="__3">
+      <from-outcome>gestionarEmpleado</from-outcome>
+      <to-activity-id>gestionarEmpleado</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__4">
+      <from-outcome>principal</from-outcome>
+      <to-activity-id>Principal</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__5">
+      <from-outcome>gestionarDepartamento</from-outcome>
+      <to-activity-id>gestionarDepartamento</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__2">
+      <from-outcome>gestionarProveedor</from-outcome>
+      <to-activity-id>gestionarProveedor</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__6">
+      <from-outcome>registrarEntradas</from-outcome>
+      <to-activity-id>registrarEntradas</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__7">
+      <from-outcome>registrarSalidas</from-outcome>
+      <to-activity-id>registrarSalidas</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
 </adfc-config>

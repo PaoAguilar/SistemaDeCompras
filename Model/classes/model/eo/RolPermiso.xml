@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RolPermiso"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="ROL_PERMISO"
+  AliasName="RolPermiso"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="RolIdRol"
+    IsNotNull="true"
+    ColumnName="ROL_ID_ROL"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="ROL_PERMISO"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="PermisoPermisoId"
+    IsNotNull="true"
+    ColumnName="PERMISO_PERMISO_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="ROL_PERMISO"
+    PrimaryKey="true"/>
+  <AccessorAttribute
+    Name="Permiso"
+    Association="model.eo.RolPermisoPermisoFkAssoc"
+    AssociationEnd="model.eo.RolPermisoPermisoFkAssoc.Permiso"
+    AssociationOtherEnd="model.eo.RolPermisoPermisoFkAssoc.RolPermiso"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Rol"
+    Association="model.eo.RolPermisoRolFkAssoc"
+    AssociationEnd="model.eo.RolPermisoRolFkAssoc.Rol"
+    AssociationOtherEnd="model.eo.RolPermisoRolFkAssoc.RolPermiso"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="RolPermisoPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="ROL_PERMISO_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.RolPermiso.RolIdRol"/>
+      <Item Value="model.eo.RolPermiso.PermisoPermisoId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="RolPermisoPermisoFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PERMISO_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="ROL_PERMISO_PERMISO_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.RolPermiso.PermisoPermisoId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="RolPermisoRolFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="ROL_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="ROL_PERMISO_ROL_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.RolPermiso.RolIdRol"/>
+    </AttrArray>
+  </Key>
+</Entity>
