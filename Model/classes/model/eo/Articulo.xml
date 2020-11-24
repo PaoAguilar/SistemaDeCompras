@@ -9,7 +9,13 @@
   DBObjectType="table"
   DBObjectName="ARTICULO"
   AliasName="Articulo"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation"
+  RowClass="model.eo.ArticuloImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Init|Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="ArticuloId"
     IsNotNull="true"
@@ -115,4 +121,37 @@
       <Item Value="model.eo.Articulo.ArticuloId"/>
     </AttrArray>
   </Key>
+  <Key
+    Name="SerialAltKey"
+    AltKey="true">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="ARTICULO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Articulo.Serial"/>
+    </AttrArray>
+  </Key>
+  <validation:UniqueKeyValidationBean
+    Name="ArticuloRule0"
+    ResId="model.eo.Articulo_Rule_0"
+    KeyName="SerialAltKey">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="Serial"/>
+    </validation:OnAttributes>
+  </validation:UniqueKeyValidationBean>
+  <validation:UniqueKeyValidationBean
+    Name="ArticuloRule1"
+    ResId="model.eo.Articulo_Rule_1"
+    KeyName="ArticuloPk">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="ArticuloId"/>
+    </validation:OnAttributes>
+  </validation:UniqueKeyValidationBean>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

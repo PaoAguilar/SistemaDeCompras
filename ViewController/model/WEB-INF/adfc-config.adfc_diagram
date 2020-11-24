@@ -27,6 +27,11 @@
          name="description">&lt;html>&lt;p>&lt;b>gestionarEmpleado&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="y">199.80469</property>
+         name="x">379.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>gestionarEmpleado&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">210.36914</property>
       <property
          name="page">/gestionarEmpleado.jsf</property>
       <property
@@ -128,6 +133,40 @@
          name="y">198.60156</property>
       <property
          name="page">/registrarSalidas.jsf</property>
+         name="activityId">gestionarArticulo</property>
+      <property
+         name="x">520.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>gestionarArticulo&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">414.89648</property>
+      <property
+         name="page">/gestionarArticulo.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="WildcardControlFlowRule4"
+      to="View11">
+      <property
+         name="fromOutcome">gestionarArticulo</property>
+      <property
+         name="sdm:polyPoints">R61,376.0,387.0166,479.0,414.5459,L50</property>
+   </ControlFlowCase>
+   <View
+      id="View13">
+      <property
+         name="activityId">ofertaArticulos</property>
+      <property
+         name="x">671.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>ofertaArticulos&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">337.59766</property>
+      <property
+         name="page">/ofertaArticulos.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -160,5 +199,10 @@
          name="fromOutcome">registrarSalidas</property>
       <property
          name="sdm:polyPoints">L55,462.84317,378.66797,223.0,252.53516,B50</property>
+      to="View13">
+      <property
+         name="fromOutcome">ofertaArticulos</property>
+      <property
+         name="sdm:polyPoints">R50,377.37845,380.0166,630.0,337.24707,L50</property>
    </ControlFlowCase>
 </SDM>
