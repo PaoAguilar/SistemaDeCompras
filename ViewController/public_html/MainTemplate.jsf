@@ -18,12 +18,12 @@
       </afc:attribute>
     </afc:component>
   </af:xmlContent>
-  <af:panelSplitter orientation="vertical" splitterPosition="120" id="pt_ps1">
+  <af:panelSplitter orientation="vertical" splitterPosition="140" id="pt_ps1">
     <f:facet name="first">
       <af:panelGridLayout id="pt_pgl1" inlineStyle="background-color:#fff9ea;">
         <af:gridRow marginTop="5px" height="auto" id="pt_gr1">
           <af:gridCell marginStart="5px" width="40%" id="pt_gc1" inlineStyle="background-color:transparent;">
-            <af:image id="pt_i1" source="/images/online-shop.png" inlineStyle="width:123px; height:76px;"
+            <af:image id="pt_i1" source="/images/logoo.png" inlineStyle="width:400px; height:100px;"
                       shortDesc="logo"/>
           </af:gridCell>
           <af:gridCell marginStart="5px" width="33%" id="pt_gc2">
@@ -51,6 +51,11 @@
               <af:menu text="Modulo de RRHH" id="pt_m3">
                 <af:commandMenuItem text="Gestionar empleado" id="pt_cmi6" action="gestionarEmpleado"/>
                 <af:commandMenuItem text="Gestionar departamento" id="pt_cmi7" action="gestionarDepartamento"/>
+                <af:commandMenuItem text="Gestionar proveedor" id="pt_cmi8" action="gestionarProveedor"/>
+              </af:menu>
+              <af:menu text="Modulo de Inventario" id="pt_m4">
+                <af:commandMenuItem text="Registrar entradas de producto" id="pt_cmi9" action="registrarEntradas"/>
+                <af:commandMenuItem text="Registrar salidas de producto" id="pt_cmi10" action="registrarSalidas"/>
               </af:menu>
             </af:menuBar>
           </af:gridCell>
