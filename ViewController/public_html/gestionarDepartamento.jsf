@@ -2,9 +2,92 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <af:document title="Sistema de Compras || Gestionar departamento" id="d1">
+        <af:messages id="m1"/>
         <af:form id="f1">
             <af:pageTemplate viewId="/MainTemplate.jsf" id="pt1">
-                <f:facet name="body"/>
+                <f:facet name="body">
+                    <af:panelGroupLayout id="pgl1" layout="vertical" halign="center">
+                        <af:spacer id="s1" height="30" width="10"/>
+                        <af:panelGroupLayout id="pgl2" layout="horizontal">
+                            <af:button actionListener="#{bindings.CreateInsert.execute}" text="Agregar"
+                                       disabled="#{!bindings.CreateInsert.enabled}" id="b1" icon="/images/add.png"/>
+                            <af:button actionListener="#{bindings.Delete.execute}" text="Eliminar"
+                                       disabled="#{!bindings.Delete.enabled}" id="b2" icon="/images/delete.png"/>
+                            <af:button actionListener="#{bindings.Commit.execute}" text="Guardar" id="b3" icon="/images/save.png"/>
+                            <af:button actionListener="#{bindings.Rollback.execute}" text="Cancelar" immediate="true" id="b4"
+                                       icon="/images/cancel.png">
+                                <af:resetActionListener/>
+                            </af:button>
+                            <f:facet name="separator">
+                                <af:spacer id="s3" height="10" width="10"/>
+                            </f:facet>
+                        </af:panelGroupLayout>
+                        <af:spacer id="s2" height="10" width="10"/>
+                        <af:panelCollection id="pc1" inlineStyle="width:500px;">
+                            <f:facet name="menus"/>
+                            <f:facet name="toolbar"/>
+                            <f:facet name="statusbar"/>
+                            <af:table value="#{bindings.DepartamentoView1.collectionModel}" var="row"
+                                      rows="#{bindings.DepartamentoView1.rangeSize}"
+                                      emptyText="#{bindings.DepartamentoView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                      rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.DepartamentoView1.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.DepartamentoView1.collectionModel.makeCurrent}"
+                                      rowSelection="single" fetchSize="#{bindings.DepartamentoView1.rangeSize}"
+                                      filterModel="#{bindings.DepartamentoView1Query.queryDescriptor}"
+                                      filterVisible="true"
+                                      queryListener="#{bindings.DepartamentoView1Query.processQuery}" varStatus="vs"
+                                      id="t1" autoHeightRows="-1" partialTriggers=":::b1 :::b2"
+                                      inlineStyle="width:500px;" columnStretching="last">
+                                <af:column id="c4" width="14" rowHeader="true"/>
+                                <af:column sortProperty="#{bindings.DepartamentoView1.hints.DepartamentoId.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.DepartamentoView1.hints.DepartamentoId.label}"
+                                           id="c1" width="100">
+                                    <af:inputText value="#{row.bindings.DepartamentoId.inputValue}"
+                                                  label="#{bindings.DepartamentoView1.hints.DepartamentoId.label}"
+                                                  required="#{bindings.DepartamentoView1.hints.DepartamentoId.mandatory}"
+                                                  columns="#{bindings.DepartamentoView1.hints.DepartamentoId.displayWidth}"
+                                                  maximumLength="#{bindings.DepartamentoView1.hints.DepartamentoId.precision}"
+                                                  shortDesc="#{bindings.DepartamentoView1.hints.DepartamentoId.tooltip}"
+                                                  id="it1">
+                                        <f:validator binding="#{row.bindings.DepartamentoId.validator}"/>
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.DepartamentoView1.hints.DepartamentoId.format}"/>
+                                    </af:inputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.DepartamentoView1.hints.NombreDepartamento.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.DepartamentoView1.hints.NombreDepartamento.label}"
+                                           id="c2" width="200">
+                                    <af:inputText value="#{row.bindings.NombreDepartamento.inputValue}"
+                                                  label="#{bindings.DepartamentoView1.hints.NombreDepartamento.label}"
+                                                  required="#{bindings.DepartamentoView1.hints.NombreDepartamento.mandatory}"
+                                                  columns="#{bindings.DepartamentoView1.hints.NombreDepartamento.displayWidth}"
+                                                  maximumLength="#{bindings.DepartamentoView1.hints.NombreDepartamento.precision}"
+                                                  shortDesc="#{bindings.DepartamentoView1.hints.NombreDepartamento.tooltip}"
+                                                  id="it2">
+                                        <f:validator binding="#{row.bindings.NombreDepartamento.validator}"/>
+                                    </af:inputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.DepartamentoView1.hints.CodigoDepartamento.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.DepartamentoView1.hints.CodigoDepartamento.label}"
+                                           id="c3" width="100">
+                                    <af:inputText value="#{row.bindings.CodigoDepartamento.inputValue}"
+                                                  label="#{bindings.DepartamentoView1.hints.CodigoDepartamento.label}"
+                                                  required="#{bindings.DepartamentoView1.hints.CodigoDepartamento.mandatory}"
+                                                  columns="#{bindings.DepartamentoView1.hints.CodigoDepartamento.displayWidth}"
+                                                  maximumLength="#{bindings.DepartamentoView1.hints.CodigoDepartamento.precision}"
+                                                  shortDesc="#{bindings.DepartamentoView1.hints.CodigoDepartamento.tooltip}"
+                                                  id="it3">
+                                        <f:validator binding="#{row.bindings.CodigoDepartamento.validator}"/>
+                                    </af:inputText>
+                                </af:column>
+                            </af:table>
+                        </af:panelCollection>
+                    </af:panelGroupLayout>
+                </f:facet>
                 <f:attribute name="pageTitle" value="Gestionar departamento"/>
             </af:pageTemplate>
         </af:form>
