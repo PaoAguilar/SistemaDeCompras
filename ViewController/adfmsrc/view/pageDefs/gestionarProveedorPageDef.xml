@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="gestionarProveedorPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmpresaProveedoraView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="EmpresaProveedoraView1Iterator"/>
+    <searchRegion Binds="EmpresaProveedoraView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="EmpresaProveedoraView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="EmpresaProveedoraView1Iterator" id="EmpresaProveedoraView1">
+      <nodeDefinition DefName="model.vo.EmpresaProveedoraView" Name="EmpresaProveedoraView10">
+        <AttrNames>
+          <Item Value="CodigoProveedoraId"/>
+          <Item Value="NombreProveedora"/>
+          <Item Value="TelefonoProveedora"/>
+          <Item Value="DireccionDireccionId"/>
+          <Item Value="UsuarioUsuarioId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="EmpresaProveedoraView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="EmpresaProveedoraView1Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

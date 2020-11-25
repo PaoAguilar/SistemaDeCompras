@@ -67,11 +67,11 @@
       <property
          name="activityId">registrarEntradas</property>
       <property
-         name="x">226.0</property>
+         name="x">308.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>registrarEntradas&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">203.90039</property>
+         name="y">205.76758</property>
       <property
          name="page">/registrarEntradas.jsf</property>
       <property
@@ -82,11 +82,11 @@
       <property
          name="activityId">registrarSalidas</property>
       <property
-         name="x">161.0</property>
+         name="x">208.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>registrarSalidas&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">338.9004</property>
+         name="y">209.63477</property>
       <property
          name="page">/registrarSalidas.jsf</property>
       <property
@@ -97,11 +97,11 @@
       <property
          name="activityId">ofertaArticulos</property>
       <property
-         name="x">0.34960938</property>
+         name="x">-5.6503906</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>ofertaArticulos&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">9.097656</property>
+         name="y">212.83203</property>
       <property
          name="page">/ofertaArticulos.jsf</property>
       <property
@@ -112,11 +112,11 @@
       <property
          name="activityId">gestionarArticulo</property>
       <property
-         name="x">121.68945</property>
+         name="x">98.68945</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>gestionarArticulo&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">36.79883</property>
+         name="y">208.66602</property>
       <property
          name="page">/gestionarArticulo.jsf</property>
       <property
@@ -129,9 +129,9 @@
       <property
          name="srcid">__1</property>
       <property
-         name="x">192.0</property>
+         name="x">318.0</property>
       <property
-         name="y">26.597656</property>
+         name="y">-5.5351562</property>
    </WildcardControlFlowRule>
    <ControlFlowCase
       islink="true"
@@ -145,7 +145,7 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">T57,195.5,-22.170647,0.34960938,-45.25293,T50</property>
+         name="sdm:polyPoints">L45,279.7669,-8.6015625,-5.6503906,158.76562,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -159,7 +159,7 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">R66,228.0,37.24707,406.0,201.25098,L50</property>
+         name="sdm:polyPoints">B64,325.0,37.398438,447.0,147.53516,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -173,7 +173,7 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">R45,230.96857,23.24707,693.0,145.4541,T50</property>
+         name="sdm:polyPoints">R50,355.81622,-5.1015625,693.0,145.73828,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -187,7 +187,7 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">B57,195.5,69.24707,226.0,149.5498,T50</property>
+         name="sdm:polyPoints">B50,318.0,38.8625,308.0,151.70117,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -201,7 +201,7 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">R55,229.94145,30.24707,564.0,143.68262,T50</property>
+         name="sdm:polyPoints">R61,354.0,1.8984375,564.0,143.9668,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -215,7 +215,7 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">B43,188.5,69.24707,161.0,284.5498,T50</property>
+         name="sdm:polyPoints">B36,311.0,37.398438,208.0,155.56836,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -229,7 +229,7 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">T43,188.5,-15.75293,121.68945,-17.551758,T50</property>
+         name="sdm:polyPoints">L55,282.0,-1.6015625,98.68945,154.59961,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -243,6 +243,6 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">R34,231.79323,16.24707,849.0,149.91895,T50</property>
+         name="sdm:polyPoints">R39,357.11893,-12.1015625,849.0,150.20312,T50</property>
    </ControlFlowCase>
 </SDM>
