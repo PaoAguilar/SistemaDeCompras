@@ -10,4 +10,8 @@ public class ModelUtil {
         SequenceImpl seq = new SequenceImpl("ID_SEQ", transaction);
         return new BigDecimal(seq.getSequenceNumber().toString());
     }
+  public static BigDecimal getSequenceNextValue(DBTransaction transaction){
+      SequenceImpl seq = new SequenceImpl("ARTICULO_SEQ", transaction);
+      return new BigDecimal(seq.getSequenceNumber().toString());
+  }
 }
