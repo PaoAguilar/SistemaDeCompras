@@ -12,7 +12,9 @@
                             <af:button actionListener="#{bindings.CreateInsert.execute}" text="Agregar"
                                        disabled="#{!bindings.CreateInsert.enabled}" id="b1" icon="/images/add.png"/>
                             <af:button actionListener="#{bindings.Delete.execute}" text="Eliminar"
-                                       disabled="#{!bindings.Delete.enabled}" id="b2" icon="/images/delete.png"/>
+                                       disabled="#{!bindings.Delete.enabled}" id="b2" icon="/images/delete.png">
+                                <af:showPopupBehavior popupId="p1" triggerType="action"/>
+                            </af:button>
                             <af:button actionListener="#{bindings.Commit.execute}" text="Guardar" id="b3" icon="/images/save.png"/>
                             <af:button actionListener="#{bindings.Rollback.execute}" text="Cancelar" immediate="true" id="b4"
                                        icon="/images/cancel.png">
@@ -21,6 +23,14 @@
                             <f:facet name="separator">
                                 <af:spacer id="s3" height="10" width="10"/>
                             </f:facet>
+                            <af:popup childCreation="deferred" autoCancel="disabled" id="p1"
+                                      contentDelivery="lazyUncached">
+                                <af:dialog id="d2" title="Confirmacion de Borrado" affirmativeTextAndAccessKey="Si">
+                                    <f:facet name="buttonBar"/>
+                                    <af:outputText value="Seguro que quiere borrar al Empleado #{bindings.NombreEmp.inputValue} ?" id="ot1"
+                                                   inlineStyle="font-weight:bold;"/>
+                                </af:dialog>
+                            </af:popup>
                         </af:panelGroupLayout>
                         <af:spacer id="s2" height="10" width="10"/>
                         <af:panelCollection id="pc1" inlineStyle="width:1300px;">

@@ -58,5 +58,10 @@
       <from-outcome>gestionarArticulo</from-outcome>
       <to-activity-id>gestionarArticulo</to-activity-id>
     </control-flow-case>
-  </control-flow-rule> 
+  </control-flow-rule>
+  <managed-bean id="__10">
+    <managed-bean-name>empleado</managed-bean-name>
+    <managed-bean-class>view.bean.EmpleadoBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

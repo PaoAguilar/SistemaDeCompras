@@ -15,9 +15,6 @@
     <adf-property name="adfAppUID" value="SistemaDeCompras-5714"/>
   </adf:adf-properties-child>
   <sec:adf-security-child xmlns="http://xmlns.oracle.com/adf/security/config">
-    <sec:JaasSecurityContext initialContextFactoryClass="oracle.adf.share.security.JAASInitialContextFactory"
-                             jaasProviderClass="oracle.adf.share.security.providers.jps.JpsSecurityContext"
-                             authorizationEnforce="false" authenticationRequire="true"/>
     <CredentialStoreContext credentialStoreClass="oracle.adf.share.security.providers.jps.CSFCredentialStore"
                             credentialStoreLocation="../../src/META-INF/jps-config.xml"/>
   </sec:adf-security-child>
